@@ -5,7 +5,7 @@ Computer Systems Architecture Course
 Assignment 1
 March 2021
 """
-from threading import Lock, Thread, currentThread
+from threading import Lock, currentThread
 from typing import Dict
 
 

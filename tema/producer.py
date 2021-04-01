@@ -6,7 +6,7 @@ Assignment 1
 March 2021
 """
 import time
-from threading import Thread, Lock
+from threading import Thread
 
 
 class Producer(Thread):
@@ -35,14 +35,14 @@ class Producer(Thread):
         self.products = products
         self.marketplace = marketplace
         self.republish_wait_time = republish_wait_time
-        self.id = self.marketplace.register_producer()
+        self.id_reg = self.marketplace.register_producer()
 
     def run(self):
         while True:
             for i in range(0, len(self.products)):
                 for j in range(0, self.products[i][1]):
-                    x = self.marketplace.publish(self.id, self.products[i][0])
-                    if x:
+                    check = self.marketplace.publish(self.id_reg, self.products[i][0])
+                    if check:
                         time.sleep(self.products[i][2])
                     else:
                         j -= 1

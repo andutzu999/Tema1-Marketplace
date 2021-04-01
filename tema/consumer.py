@@ -56,4 +56,3 @@ class Consumer(Thread):
                         cnt += 1
 
             self.marketplace.place_order(cart_id)
-
