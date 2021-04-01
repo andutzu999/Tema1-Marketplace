@@ -47,4 +47,3 @@ class Producer(Thread):
                     else:
                         j -= 1
                         time.sleep(self.republish_wait_time)
-

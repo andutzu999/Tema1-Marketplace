@@ -6,7 +6,6 @@ Assignment 1
 March 2021
 """
 from threading import Lock, currentThread
-from typing import Dict
 
 
 class Marketplace:
@@ -113,7 +112,7 @@ class Marketplace:
         :type cart_id: Int
         :param cart_id: id cart
         """
-        for x in self.cons_dict[cart_id]:
+        for item in self.cons_dict[cart_id]:
             self.printer.acquire()
-            print(currentThread().getName() + " bought " + str(x))
+            print(currentThread().getName() + " bought " + str(item))
             self.printer.release()
