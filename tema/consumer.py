@@ -40,19 +40,19 @@ class Consumer(Thread):
     def run(self):
         for cart in self.carts:
             cart_id = self.marketplace.new_cart()
-            for op in cart:
+            for operation in cart:
                 cnt = 0
-                quantity = op['quantity']
+                quantity = operation['quantity']
                 while cnt < quantity:
-                    if op['type'] == "add":
-                        check1 = self.marketplace.add_to_cart(cart_id, op['product'])
+                    if operation['type'] == "add":
+                        check1 = self.marketplace.add_to_cart(cart_id, operation['product'])
                         if check1:
                             cnt += 1
                         else:
                             time.sleep(self.retry_wait_time)
 
-                    if op['type'] == "remove":
-                        self.marketplace.remove_from_cart(cart_id, op['product'])
+                    if operation['type'] == "remove":
+                        self.marketplace.remove_from_cart(cart_id, operation['product'])
                         cnt += 1
 
             self.marketplace.place_order(cart_id)
