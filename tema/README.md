@@ -1,7 +1,6 @@
-Nume: Blanaru Andy-Ștefan
-Grupă: 332CB
 
-										TEMA 1 - Marketplace
+
+						TEMA 1 - Marketplace
 		
 		Organizare
 		
@@ -15,8 +14,7 @@ Grupă: 332CB
 			
 			Consider că tema este utilă deoarece te invață cum să folosești lock-uri
 		care au un rol foarte important în organizarea execuției thread-urilor. Totodată,
-		python este limbajul potrivit de a implementa această problemă și am asimilat
-		astfel noi cunostințe ale acestui limbaj. 
+		python este limbajul potrivit pentru implementarea acestui tip de problema.
 			Implementarea mea este destul de bună si eficientă, avand in vedere faptul că
 		nu depaseste limita de timp impusa in teste.
 		
